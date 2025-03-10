@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="css/contact us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="assets/Rhyno Logo .png"></div>
+        <div class="menulinks">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About</a></li>
+            <li>
+                <a href="#">Products</a>
+                <ul class="dropdown">
+                    <div class="slide">
+                    <li><a href="SE03 Lite.html">SE03 Lite</a></li>
+                    <li><a href="SE03.html">SE03</a></li>
+                    <li><a href="SE03 Max.html">SE03 Max</a></li>
+                    <li><a href="compare.html">Compare all</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li><a href="prebook.html">Pre-book now</a></li>
+            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <li><a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <span class="big-circle"></span>
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+            <div class="info">
+              <div class="information">
+                <i class="fa-regular fa-location-dot"></i>
+                <p>Rhyno Wheels Private limited, Near UG hostel gate #2, Behind PDEU,
+                    Raisan, Gandhinagar, Gujarat, India.</p>
+              </div>
+              <div class="information">
+                <i class="fa-regular fa-envelope"></i>
+                <p>info@rhyno.in</p>
+              </div>
+              <div class="information">
+                <i class="fa-regular fa-phone"></i>
+                <p>+91-9023987528</p>
+              </div>
+            </div>
+  
+            <div class="social-media">
+              <p>Connect with us :</p>
+              <div class="social-icons">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+  
+            <form action="index.html" autocomplete="off">
+              <h3 class="title">Contact us</h3>
+              <div class="input-container">
+                <input type="text" name="name" class="input" />
+                <label for="">Username</label>
+                <span>Username</span>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" class="input" />
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+              <div class="input-container">
+                <input type="tel" name="phone" class="input" />
+                <label for="">Phone</label>
+                <span>Phone</span>
+              </div>
+              <div class="input-container textarea">
+                <textarea name="message" class="input"></textarea>
+                <label for="">Message</label>
+                <span>Message</span>
+              </div>
+              <input type="submit" value="Send" class="btn" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="containers">
+            <div class="rows">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="contact us.html">Contact us</a></li>
+                        <li><a href="compare.html">Products</a></li>
+                        <li><a href="#">Careerm</a></li>
+                     <li><a href="rental.html">Rentals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Policy</h4>
+                    <ul>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Refund policy</a></li>
+                        <li><a href="#">Website policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://in.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+      <script>
+        const inputs = document.querySelectorAll(".input");
+
+         function focusFunc() {
+         let parent = this.parentNode;
+         parent.classList.add("focus");
+        }
+
+         function blurFunc() {
+         let parent = this.parentNode;
+         if (this.value == "") {
+         parent.classList.remove("focus");
+         }
+         }
+
+         inputs.forEach((input) => {
+         input.addEventListener("focus", focusFunc);
+         input.addEventListener("blur", blurFunc);
+     });
+      </script>
+</body>
+</html>   

@@ -1,0 +1,662 @@
+*{
+    margin: 0;
+    text-decoration: 0;
+}
+:root{
+    --item1-transform: translateX(-100%) translateY(-5%) scale(1.5);
+    --item1-filter: blur(30px);
+    --item1-zIndex: 11;
+    --item1-opacity: 0;
+
+    --item2-transform: translateX(0);
+    --item2-filter: blur(0px);
+    --item2-zIndex: 10;
+    --item2-opacity: 1;
+
+    --item3-transform: translate(50%,10%) scale(0.8);
+    --item3-filter: blur(10px);
+    --item3-zIndex: 9;
+    --item3-opacity: 1;
+
+    --item4-transform: translate(90%,20%) scale(0.5);
+    --item4-filter: blur(30px);
+    --item4-zIndex: 8;
+    --item4-opacity: 1;
+    
+    --item5-transform: translate(120%,30%) scale(0.3);
+    --item5-filter: blur(40px);
+    --item5-zIndex: 7;
+    --item5-opacity: 0;
+}
+.navbar{
+   
+    display: flex;
+    padding-left:50px ;
+    padding-right:50px ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+.logo img{
+    width: 120px;
+    height: 60px;
+}
+.menulinks ul{
+    list-style: none;
+    padding-top: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menulinks ul li{
+    display: inline-block;
+    position: relative;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+.menulinks ul li a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    padding-left:15px ;
+    padding-top:5px ;
+    padding-bottom: 5px;
+    padding-right:15px ;
+}
+.menulinks ul li ul.dropdown li{
+    display: block;
+    border-radius: 10px;
+    width: 190px;
+    position: relative;
+    right: 20px;
+    
+}
+.menulinks ul li ul.dropdown li a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.menulinks ul li ul.dropdown{
+    width: 100%;
+    position: absolute;
+    display: none;
+}
+.menulinks ul li:hover ul.dropdown{
+    display: block;
+}
+.slide{
+    width: 150px;
+    position: relative;
+    right: 98px;
+    padding-right: 40px;
+    border-radius: 10px;
+    background-color: white;
+}
+.slide a:hover{
+    color: white;
+}
+.slide li:hover{
+    background-color: black;
+}
+.menulinks ul li:hover{
+    background-color: black;
+
+}
+.menulinks ul li a:hover{
+    color: white;
+}
+.front{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right:100px ;
+}
+.frontline{
+    display: inline-flex;
+}
+.frontline .static{
+    font-size: 40px;
+    color: black;
+}
+.topl h1{
+    color: grey;
+}
+.frontline .dynamic{
+    position: relative;
+    right: 27px;
+    height: 45px;
+    overflow: hidden;
+}
+.dynamic li{
+    list-style: none;
+    font-size: 40px;
+    color: #c7bc21;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+@keyframes slide {
+    100%{
+        top: -180px;
+    }
+}
+.dynamic li span{
+    position: relative;
+}
+.dynamic li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-left: 2px solid #c8bc14;
+    animation: typing 1.5s steps(10) infinite;
+}
+@keyframes typing {
+    100%{left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+.bike a img{
+    width: 512px;
+}
+.top{
+    display: flex;
+    padding-top: 40px;
+    padding-left :55px;
+}
+.topl h1{
+    font-size: 40px;
+    font-weight: 500;
+    animation:move 1.5s ease-in;
+}
+.topl{
+    padding-top: 100px;
+}
+.bike{
+    animation: leftmove 4s ease;
+    transition: transform 4s ease;
+}
+@keyframes move {
+    0%{
+        font-size: 60px;
+    }
+}
+@keyframes leftmove {
+    0%{
+        transform: translatex(-410px);
+    }
+}
+.hero{
+    width: 100%;
+}
+.hero .row{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.hero .row .left-sec{
+    width: 40%;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.hero .row .left-sec h2{
+    font-size: 85px;
+    text-transform: capitalize;
+    padding-left: 20px;
+}
+.hero .row .left-sec h2 span{
+    color: gray;
+}
+.hero .row .left-sec p{
+    margin: 20px 0;
+    line-height: 28px;
+    padding-right:100px ;
+    padding-left: 20px;
+}
+.hero .row .left-sec .discover-btn{
+    display: flex;
+    align-items: center;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: black;
+    
+}
+.hero .row .left-sec .discover-btn a{
+    color: yellow;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-right: 15px;
+    text-transform: capitalize;
+}
+.hero .information{
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.hero .information .production{
+    margin-right: 50px;
+    line-height: 3px;
+}
+.hero .information .production h2{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.hero .information .production p{
+    padding-right: 0;
+    letter-spacing: 1px;
+}
+.hero .right-sec{
+    width: 60%;
+    padding-top:100px ;
+}
+.hero .right-sec img{
+    width: 650px;
+    height: 500px;
+    margin: auto;
+    float: right;
+}
+/* carousel */
+.carousel{
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+}
+.carousel .list{
+    position: absolute;
+    width: 1140px;
+    max-width: 90%;
+    height: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.carousel .list .item{
+    position: absolute;
+    left: 0%;
+    width: 70%;
+    height: 100%;
+    font-size: 15px;
+    transition: left 0.5s, opacity 0.5s, width 0.5s;
+}
+.carousel .list .item:nth-child(n + 6){
+    opacity: 0;
+}
+.carousel .list .item:nth-child(2){
+    z-index: 10;
+    transform: translateX(0);
+}
+.carousel .list .item img{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 1.5s;
+}
+
+.carousel .list .item .introduce{
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(2) .introduce{
+    opacity: 1;
+    pointer-events: auto;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    transform:  translateY(-50%);
+    transition: opacity 0.5s;
+}
+.carousel .list .item .introduce .title{
+    font-size: 4em;
+    font-weight: 500;
+    line-height: 1em;
+    padding-bottom: 40px;
+}
+.carousel .list .item .introduce .des{
+    font-size: 2em;
+    color: #5559;
+    padding-bottom: 40px;
+}
+.carousel .list .item .introduce .seeMore{
+    font-family: Poppins;
+    margin-top: 1.2em;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid #555;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: background 0.5s;
+}
+.carousel .list .item .introduce .seeMore:hover{
+    background: #eee;
+}
+.carousel .list .item:nth-child(1){
+    transform: var(--item1-transform);
+    filter: var(--item1-filter);
+    z-index: var(--item1-zIndex);
+    opacity: var(--item1-opacity);
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(3){
+    transform: var(--item3-transform);
+    filter: var(--item3-filter);
+    z-index: var(--item3-zIndex);
+}
+.carousel .list .item:nth-child(4){
+    transform: var(--item4-transform);
+    filter: var(--item4-filter);
+    z-index: var(--item4-zIndex);
+}
+.carousel .list .item:nth-child(5){
+    transform: var(--item5-transform);
+    filter: var(--item5-filter);
+    opacity: var(--item5-opacity);
+    pointer-events: none;
+}
+/* animation text in item2 */
+.carousel .list .item:nth-child(2) .introduce .title,
+.carousel .list .item:nth-child(2) .introduce .des,
+.carousel .list .item:nth-child(2) .introduce .seeMore{
+    opacity: 0;
+    animation: showContent 0.5s 1s ease-in-out 1 forwards;
+}
+@keyframes showContent{
+    from{
+        transform: translateY(-30px);
+        filter: blur(10px);
+    }to{
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+.carousel .list .item:nth-child(2) .introduce .des{
+    animation-delay: 1.4s;
+}
+.carousel .list .item:nth-child(2) .introduce .seeMore{
+    animation-delay: 1.6s;
+}
+/* next click */
+.carousel.next .item:nth-child(1){
+    animation: transformFromPosition2 0.5s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition2{
+    from{
+        transform: var(--item2-transform);
+        filter: var(--item2-filter);
+        opacity: var(--item2-opacity);
+    }
+}
+.carousel.next .item:nth-child(2){
+    animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition3{
+    from{
+        transform: var(--item3-transform);
+        filter: var(--item3-filter);
+        opacity: var(--item3-opacity);
+    }
+}
+.carousel.next .item:nth-child(3){
+    animation: transformFromPosition4 0.9s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition4{
+    from{
+        transform: var(--item4-transform);
+        filter: var(--item4-filter);
+        opacity: var(--item4-opacity);
+    }
+}
+.carousel.next .item:nth-child(4){
+    animation: transformFromPosition5 1.1s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition5{
+    from{
+        transform: var(--item5-transform);
+        filter: var(--item5-filter);
+        opacity: var(--item5-opacity);
+    }
+}
+/* previous */
+.carousel.prev .list .item:nth-child(5){
+    animation: transformFromPosition4 0.5s ease-in-out 1 forwards;
+}
+.carousel.prev .list .item:nth-child(4){
+    animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+}
+.carousel.prev .list .item:nth-child(3){
+    animation: transformFromPosition2 0.9s ease-in-out 1 forwards;
+}
+.carousel.prev .list .item:nth-child(2){
+    animation: transformFromPosition1 1.1s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition1{
+    from{
+        transform: var(--item1-transform);
+        filter: var(--item1-filter);
+        opacity: var(--item1-opacity);        
+    }
+}
+
+/* detail  */
+.carousel .list .item .detail{
+    opacity: 0;
+    pointer-events: none;
+}
+/* showDetail */
+.carousel.showDetail .list .item:nth-child(3),
+.carousel.showDetail .list .item:nth-child(4){
+    left: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel.showDetail .list .item:nth-child(2){
+    width: 100%;
+}
+.carousel.showDetail .list .item:nth-child(2) .introduce{
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel.showDetail .list .item:nth-child(2) img{
+    right: 50%;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail{
+    opacity: 1;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    pointer-events: auto;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .title{
+    font-size: 4em;
+    padding-bottom: 30px;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail  .title,
+.carousel.showDetail .list .item:nth-child(2) .detail  .des{
+    opacity: 0;
+    animation: showContent 0.5s 1s ease-in-out 1 forwards;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail  .des{
+    animation-delay: 1.2s;
+    font-size: 2em;
+    color: gray;
+}
+.arrows{
+    position: absolute;
+    bottom: 40px;
+    width: 1140px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#prev,
+#next{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-family: monospace;
+    border: 1px solid #5555;
+    font-size: large;
+    bottom: 20%;
+    left: 10%;
+}
+#next{
+    left: unset;
+    right: 10%;
+}
+#back{
+    position: absolute;
+    z-index: 100;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-bottom: 1px solid #555;
+    font-family: Poppins;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: transparent;
+    padding: 10px;
+    /* opacity: 0; */
+    transition: opacity 0.5s;
+}
+.carousel.showDetail #back{
+    opacity: 1;
+}
+.carousel.showDetail #prev,
+.carousel.showDetail #next{
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel::before{
+    width: 500px;
+    height: 300px;
+    content: '';
+    background-image: linear-gradient(70deg,gray, yellow);
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    filter: blur(150px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    transition: 1s;
+}
+.carousel.showDetail::before{
+    transform: translate(-100%, -50%) rotate(90deg);
+    filter: blur(130px);
+}
+.floating a button{
+   position: fixed;
+   right: 50px;
+   bottom: 50px;
+   padding: 15px 35px;
+   border-radius: 20px;
+   border: none;
+   background-color: yellow;
+   transition: transform 1s ease;
+}
+.floating a button:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(-10px);
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.rows{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: yellow;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE03 Max</title>
+    <link rel="stylesheet" href="css/SE03 Max.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="assets/Rhyno Logo .png"></div>
+        <div class="menulinks">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About</a></li>
+            <li>
+                <a href="#">Products</a>
+                <ul class="dropdown">
+                    <div class="slide">
+                    <li><a href="SE03 Lite.html">SE03 Lite</a></li>
+                    <li><a href="SE03.html">SE03</a></li>
+                    <li><a href="SE03 Max.html">SE03 Max</a></li>
+                    <li><a href="compare.html">Compare all</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li><a href="prebook.html">Pre-book now</a></li>
+            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <li><a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            </ul>
+        </div>
+    </div>
+    <!-- mid -->
+    <div class = "banner-content">
+        <!-- banner left -->
+        <div class = "banner-left">
+          <h2><span>RHYNO</span>SE03 Max</h2>
+          <p>Indulge in the perfect harmony of power and range with this Rhyno. Offering an
+             exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still
+             delivering an impressive 80-100 km range on a single charge. Like its counterparts, this
+             machine features the safety assurance of a fire-safe advanced LFP battery, along with the
+             comprehensive benefits of owning a Rhino. Boasting a formidable combination of a 2000W
+             motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying
+             journey at every turn. Check out the other details below!</p>
+        </div>
+        <!-- banner right -->
+        <div class = "banner-right">
+          <img src = "assets/rhyno_blue.png">
+          <div class = "color-content">
+            <h3>select color</h3>
+            <div class = "color-groups">
+              <div class = "color color-blue active-color"></div>
+              <div class = "color color-black"></div>
+              <div class = "color color-gold"></div>
+              <div class = "color color-red"></div>
+              <div class = "color color-gray"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="row1">
+            <div>
+                <p>Battery</p>
+                <h3>2.7 Kwh</h3>
+            </div>
+            <div>
+                <p>Max Range (@30Km/h)</p>
+                <h3>150 Km</h3>
+            </div>
+            <div>
+                <p>Motor</p>
+                <h3>1500 W</h3>
+            </div>
+            <div>
+                <p>Charging time</p>
+                <h3>4 Hours (12A)</h3>
+            </div>
+        </div>
+        <div class="row2">
+            <div>
+                <p>Battery warranty</p>
+                <h3>3 Years</h3>
+            </div>
+            <div>
+                <p>Max Speed</p>
+                <h3>55 Km/h</h3>
+            </div>
+            <div>
+                <p>Max range(@full speed)</p>
+                <h3>90 Km</h3>
+            </div>
+            <div>
+                <p>Max range(@45Km/h)</p>
+                <h3>110 Km</h3>
+            </div>
+        </div>
+        <div class="row3">
+            <div>
+                <p>Other Key benefits</p>
+                <h3> --> Fire-safe battery</h3>
+                <h3> --> Range prediction</h3>
+                <h3> --> Comfortable ride</h3>
+                <h3> --> Safe ad Stable</h3>
+            </div>
+            <div>
+                <p>Battery features</p>
+                <h3> --> LFP with 1500 cycles</h3>
+                <h3> --> Active Balancing</h3>
+                <h3> --> Waterproof (IP67)</h3>
+            </div>
+        </div>
+      </div>
+      <div class="book"><a href="payment.html"><button>Book Now</button></a></div>
+      <footer class="footer">
+        <div class="container">
+            <div class="rows">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="contact us.html">Contact us</a></li>
+                        <li><a href="compare.html">Products</a></li>
+                        <li><a href="#">Careerm</a></li>
+                     <li><a href="rental.html">Rentals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Policy</h4>
+                    <ul>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Refund policy</a></li>
+                        <li><a href="#">Website policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://in.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+      <script>
+        const COLOR_BTNS = document.querySelectorAll('.color');
+        COLOR_BTNS.forEach(color => {
+         color.addEventListener('click', () => {
+        let colorNameClass = color.className;
+        if(!color.classList.contains('active-color')){
+            let colorName = colorNameClass.slice(colorNameClass.indexOf('-') + 1, colorNameClass.length);
+            resetActiveBtns();
+            color.classList.add('active-color');
+            setNewColor(colorName)
+        }
+        });
+        })
+    function resetActiveBtns(){
+    COLOR_BTNS.forEach(color => {
+        color.classList.remove('active-color');
+    });
+    }
+    function setNewColor(color){
+    document.querySelector('.banner-right img').src = `assets/rhyno_${color}.png`;
+     }
+      </script>
+</body>
+</html>
